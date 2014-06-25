@@ -1,0 +1,9 @@
+#spree-footer
+  .container
+    footer#footer.row[data-hook]
+      #footer-left.col-md-6[data-hook]
+        p
+          = Spree.t :powered_by
+          |  
+          = link_to 'Spree', 'http://spreecommerce.com/'
+      #footer-right.col-md-6[data-hook]
