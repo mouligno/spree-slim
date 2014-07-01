@@ -1,8 +1,111 @@
-#spree-header
-  header#header[data-hook]
+header#header data-hook=""
+  /! Top Bar
+  #top-bar
+    /! Container
     .container
-      figure#logo.col-md-4[data-hook]
-        = logo
-      = render :partial => 'spree/shared/nav_bar'
-  .container
-    = render :partial => 'spree/shared/main_nav_bar' if store_menu?
+      /! Left Nav
+      ul.links.pull-left.hidden-xs
+        li
+          a href="#"
+            i.fa.fa-envelope
+            | support@domain.com
+        li
+          a href="#"
+            i.fa.fa-user
+            | Phone: +48 880 440 110
+      /! /Left nav
+      /! Right Nav
+      ul.links.pull-right.no-float-xs
+        li
+          a href="#"
+            i.fa.fa-rss
+            | feed
+        li
+          a href="#"
+            i.fa.fa-bars
+            | statements
+        li
+          a href="#"
+            i.fa.fa-download
+            | downloads
+      /! /Right nav
+    /! /Container
+  /! /Top Bar
+  /! Main Navigation
+  #main-nav.navbar.navbar-default
+    /! Container
+    .container
+      /! header
+      .navbar-header
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+          span.fa.fa-bars.fa-lg
+        a.navbar-brand href="index.html"
+          h1.brand-logo
+            = logo
+      /! /header
+      /! nav-collapse
+      .navbar-collapse.collapse
+        /! Nav Buttons
+        ul.nav.navbar-nav.nav-buttons.navbar-right
+          li
+            a.nav-btn href="contact.html"
+              i.fa.fa-envelope
+              span.xs-only contact
+          li
+            a.nav-btn.bg-2.top-bar-toggle data-class="open" data-custom-toggle="slide" data-target="#top-bar" href="#top-bar"
+              span.symbol
+        /! /Nav Buttons
+        /! Nav Buttons
+        ul.nav.navbar-nav.nav-buttons.navbar-right
+          li
+            a.nav-btn.bg-1 href="shop-index.html"
+              i.fa.fa-th-large
+              span our store
+        /! /Nav Buttons
+        /! Links
+        ul.nav.navbar-nav.navbar-right
+          li.active
+            a href="index.html"
+              i.icon.fa.fa-home
+              | home
+          li.dropdown
+            a.dropdown-toggle data-toggle="dropdown" href="#"
+              i.icon.fa.fa-file-text
+              | pages
+              i.fa.fa-angle-down.parent-symbol
+            ul.dropdown-menu
+              li
+                a href="about.html"  About Us
+              li
+                a href="services.html"  Services
+              li
+                a href="sidenav.html"  side bar
+              li
+                a href="faq.html"  FAQ
+              li
+                a href="404.html"  404
+              li
+                a href="features.html"  features
+              li
+                a href="icons.html"  icons
+              li
+                a href="login.html"  Login
+              li
+                a href="register.html"  Register
+          li
+            a href="portfolio.html"
+              i.icon.fa.fa-camera
+              | portfolio
+          li.dropdown
+            a.dropdown-toggle data-toggle="dropdown" href="#"
+              i.icon.fa.fa-comments
+              | blog
+              i.fa.fa-angle-down.parent-symbol
+            ul.dropdown-menu
+              li
+                a href="blog.html"  Blog Posts
+              li
+                a href="post.html"  Single Post
+        /! Links
+      /! /nav-collapse
+    /! /Container
